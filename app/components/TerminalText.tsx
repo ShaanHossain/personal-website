@@ -1,3 +1,9 @@
-export default function TerminalText({ children }: { children: string }) {
-  return <p className="text-4xl text-green-400 font-meslo">{children}</p>;
+export default function TerminalText({
+  children,
+  color = "text-green-400",
+}: {
+  children: string | string[];
+  color?: string;
+}) {
+  return <p className={`text-4xl font-meslo ${color}`}>{children}</p>;
 }
